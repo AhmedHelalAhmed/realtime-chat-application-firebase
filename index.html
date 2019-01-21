@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Real time chat application</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <style>
+    p.lead, h3{
+        text-transform: uppercase;
+
+    }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+       <div class="col-md-2"></div>
+        <div class="col-md-7">
+            <h3 class="text-center">simple real time chat application</h3>
+            <div class="text-center">
+                    <a href="#bottom" class="btn btn-default">add messages</a>
+                </div>
+            <hr/>
+            <ul id="chat-messages" class="list-group" style="border: 3px solid black">
+            </ul>
+      
+
+            <div>
+                <h3 class="text-center">add message</h3>
+
+                <hr/>
+                <form method="post" name="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" required placeholder="Enter name">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea type="message" class="form-control" id="message" required placeholder="Enter Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary send">send</button>
+                </form>
+            </div>
+               
+        </div>
+    </div>
+</div>
+<div id="bottom"></div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) and Bootstrap -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<!-- Include Firebase Library and Config-->
+<script src="https://www.gstatic.com/firebasejs/5.8.0/firebase.js"></script>
+<!-- chat-messages Store JavaScript -->
+<script src="firebase.js"></script>
+</body>
+</html>
